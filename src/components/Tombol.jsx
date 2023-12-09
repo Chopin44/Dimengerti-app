@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon, InlineIcon } from "@iconify/react";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 
@@ -41,6 +42,15 @@ export default function Button({ variant, text, to, navigate}) {
           {text}
         </a>
       );
+
+      case "download":
+        return (
+          <a className="duration-200 px-2 py-3 flex items-center bg-amber-200 rounded-xl text-gray-950 font-medium text-sm tracking-tight cursor-pointer">
+            <InlineIcon icon="material-symbols:app-promo-outline" className="py-auto" style={{ color: 'black', fontSize: '1.5em'}}/>
+            <span className="px-1">{text}</span>
+          </a>
+        );
+  
 
     default:
       return (

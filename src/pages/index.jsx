@@ -1,10 +1,16 @@
 import { motion as m } from "framer-motion";
+import { Icon, InlineIcon } from "@iconify/react";
 import Button from "../components/Tombol";
 import Logo from "../components/Logo";
 
 import { container, item } from "../components/Animation";
 
 export default function Home() {
+
+  const handleDownloadClick = () => {
+    // Add your download logic or function here
+    console.log('Download button clicked!');
+  };
 
   return (
     
@@ -23,6 +29,7 @@ export default function Home() {
           Aplikasi untuk belajar Sistem Isyarat Bahasa Indonesia dengan
           menggunakan machine learning
         </m.p>
+        
         <m.div
           variants={item}
           whileTap={{ scale: 0.95 }}
@@ -31,7 +38,30 @@ export default function Home() {
         >
           <Button text="Mulai Belajar" to="/belajar" />
         </m.div>
+
+       
+        
       </m.div>
+
+      <m.div
+         initial="hidden"
+         animate="visible"
+         exit="exit"
+         variants={container}
+         className="text-center w-full lg:w-3/4 xl:w-1/2 my-4"
+      >
+        <m.div
+            variants={item}
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            className="w-fit mx-auto"
+            onClick={handleDownloadClick}
+          >
+            <Button variant='download' text="Download Aplikasi Dimengerti" />   
+        </m.div>
+      </m.div>
+      
+
       <m.footer
         initial="hidden"
         animate="visible"
