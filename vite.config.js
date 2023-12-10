@@ -28,7 +28,7 @@ export default defineConfig({
         // Use the 'generateSW' strategy to cache all assets during the build process
         swDest: "dist/sw.js", // Output path for the generated service worker
         globDirectory: "dist",
-        globPatterns: ["**/*.{js,css,html,png,jpg,svg,json}"],
+        globPatterns: ["**/*.{js,css,html,png,jpg,svg,json. webp, webm}"],
       },
     }),
   ],

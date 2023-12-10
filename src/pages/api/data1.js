@@ -6,7 +6,7 @@ const data = {
       shortName: "a",
       desc: "ayo belajar huruf a.",
       image: "/assets/images/a.webp",
-      video: "/assets/videos/A.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/A.webm",
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ const data = {
       shortName: "b",
       desc: "ayo belajar huruf b.",
       image: "/assets/images/b.webp",
-      video: "/assets/videos/B.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/B.webm",
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const data = {
       shortName: "c",
       desc: "ayo belajar huruf c.",
       image: "/assets/images/c.webp",
-      video: "/assets/videos/C.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/C.webm",
     },
     {
       id: 4,
@@ -30,7 +30,7 @@ const data = {
       shortName: "d",
       desc: "ayo belajar huruf d.",
       image: "/assets/images/d.webp",
-      video: "/assets/videos/D.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/D.webm",
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ const data = {
       shortName: "e",
       desc: "ayo belajar huruf e.",
       image: "/assets/images/e.webp",
-      video: "/assets/videos/E.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/E.webm",
     },
     {
       id: 6,
@@ -46,7 +46,7 @@ const data = {
       shortName: "f",
       desc: "ayo belajar huruf f.",
       image: "/assets/images/f.webp",
-      video: "/assets/videos/F.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/F.webm",
     },
     {
       id: 7,
@@ -54,7 +54,7 @@ const data = {
       shortName: "g",
       desc: "ayo belajar huruf g.",
       image: "/assets/images/g.webp",
-      video: "/assets/videos/G.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/G.webm",
     },
     {
       id: 8,
@@ -62,7 +62,7 @@ const data = {
       shortName: "h",
       desc: "ayo belajar huruf h.",
       image: "/assets/images/h.webp",
-      video: "/assets/videos/H.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/H.webm",
     },
     {
       id: 9,
@@ -70,7 +70,7 @@ const data = {
       shortName: "i",
       desc: "ayo belajar huruf i.",
       image: "/assets/images/i.webp",
-      video: "/assets/videos/I.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/I.webm",
     },
     {
       id: 10,
@@ -78,7 +78,7 @@ const data = {
       shortName: "j",
       desc: "ayo belajar huruf j.",
       image: "/assets/images/j.webp",
-      video: "/assets/videos/J.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/J.webm",
     },
     {
       id: 11,
@@ -86,7 +86,7 @@ const data = {
       shortName: "k",
       desc: "ayo belajar huruf k.",
       image: "/assets/images/k.webp",
-      video: "/assets/videos/K.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/K.webm",
     },
     {
       id: 12,
@@ -94,7 +94,7 @@ const data = {
       shortName: "l",
       desc: "ayo belajar huruf l.",
       image: "/assets/images/l.webp",
-      video: "/assets/videos/L.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/L.webm",
     },
     {
       id: 13,
@@ -102,7 +102,7 @@ const data = {
       shortName: "m",
       desc: "ayo belajar huruf m.",
       image: "/assets/images/m.webp",
-      video: "/assets/videos/M.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/M.webm",
     },
     {
       id: 14,
@@ -110,7 +110,7 @@ const data = {
       shortName: "n",
       desc: "ayo belajar huruf n.",
       image: "/assets/images/n.webp",
-      video: "/assets/videos/N.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/N.webm",
     },
     {
       id: 15,
@@ -118,7 +118,7 @@ const data = {
       shortName: "o",
       desc: "ayo belajar huruf o.",
       image: "/assets/images/o.webp",
-      video: "/assets/videos/O.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/O.webm",
     },
     {
       id: 16,
@@ -126,7 +126,7 @@ const data = {
       shortName: "p",
       desc: "ayo belajar huruf p.",
       image: "/assets/images/p.webp",
-      video: "/assets/videos/P.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/P.webm",
     },
     {
       id: 17,
@@ -134,7 +134,7 @@ const data = {
       shortName: "q",
       desc: "ayo belajar huruf q.",
       image: "/assets/images/q.webp",
-      video: "/assets/videos/Q.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/Q.webm",
     },
     {
       id: 18,
@@ -142,7 +142,7 @@ const data = {
       shortName: "r",
       desc: "ayo belajar huruf r.",
       image: "/assets/images/r.webp",
-      video: "/assets/videos/R.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/R.webm",
     },
     {
       id: 19,
@@ -150,7 +150,7 @@ const data = {
       shortName: "s",
       desc: "ayo belajar huruf s.",
       image: "/assets/images/s.webp",
-      video: "/assets/videos/S.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/S.webm",
     },
     {
       id: 20,
@@ -158,7 +158,7 @@ const data = {
       shortName: "t",
       desc: "ayo belajar huruf t.",
       image: "/assets/images/t.webp",
-      video: "/assets/videos/T.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/T.webm",
     },
     {
       id: 21,
@@ -166,7 +166,7 @@ const data = {
       shortName: "u",
       desc: "ayo belajar huruf u.",
       image: "/assets/images/u.webp",
-      video: "/assets/videos/U.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/U.webm",
     },
     {
       id: 22,
@@ -174,7 +174,7 @@ const data = {
       shortName: "v",
       desc: "ayo belajar huruf v.",
       image: "/assets/images/v.webp",
-      video: "/assets/videos/V.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/V.webm",
     },
     {
       id: 23,
@@ -182,7 +182,7 @@ const data = {
       shortName: "w",
       desc: "ayo belajar huruf w.",
       image: "/assets/images/w.webp",
-      video: "/assets/videos/W.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/W.webm",
     },
     {
       id: 24,
@@ -190,7 +190,7 @@ const data = {
       shortName: "x",
       desc: "ayo belajar huruf x.",
       image: "/assets/images/x.webp",
-      video: "/assets/videos/X.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/X.webm",
     },
     {
       id: 25,
@@ -198,7 +198,7 @@ const data = {
       shortName: "y",
       desc: "ayo belajar huruf y.",
       image: "/assets/images/y.webp",
-      video: "/assets/videos/Y.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/Y.webm",
     },
     {
       id: 26,
@@ -206,7 +206,7 @@ const data = {
       shortName: "z",
       desc: "ayo belajar huruf z.",
       image: "/assets/images/z.webp",
-      video: "/assets/videos/Z.webm",
+      video: "https://pmpk.kemdikbud.go.id/sibi/SIBI/katadasar/Z.webm",
     },
   ],
 };
