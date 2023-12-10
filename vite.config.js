@@ -25,20 +25,10 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // Workbox options go here
-        runtimeCaching: [
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "images-cache",
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
-              },
-            },
-          },
-        ],
+        // Use the 'generateSW' strategy to cache all assets during the build process
+        swDest: "dist/sw.js", // Output path for the generated service worker
+        globDirectory: "dist",
+        globPatterns: ["**/*.{js,css,html,png,jpg,svg,json}"],
       },
     }),
   ],
