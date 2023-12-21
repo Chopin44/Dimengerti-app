@@ -22,7 +22,6 @@ export default function Halaman({ fallback }) {
     const fetchData = async () => {
       try {
         const result = await import('./api/data');
-        
         setData(result.default.Huruf);
         setIsLoading(false)
       } catch (error) {
