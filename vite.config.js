@@ -7,11 +7,12 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      registerType: "autoUpdate",
       manifest: {
         fileName: "manifest.json",
-        name: "My PWA",
-        short_name: "PWA",
-        description: "My Progressive Web App",
+        name: "Dimengerti",
+        short_name: "Dimengerti",
+        description: "Dimengerti PWA",
         start_url: "/",
         display: "standalone",
         background_color: "#ffffff",
@@ -25,6 +26,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         // Use the 'generateSW' strategy to cache all assets during the build process
         swDest: "dist/sw.js", // Output path for the generated service worker
         globDirectory: "dist",

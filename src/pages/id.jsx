@@ -46,6 +46,7 @@ export default function Halaman({ fallback }) {
           <Icon icon="line-md:cancel" /> <h1>gagal memuat data...</h1>
         </div>
         <Button text="kembali" href="/belajar" />
+        
       </div>
     );
 
@@ -111,6 +112,7 @@ function DetailBelajar({data}) {
   const deteksiWebcam = () => {
     setDeteksi(false);
   };
+  
 
   const runDeteksi = async () => {
     // disables WebGL and forces TFJS to act more like Python!
@@ -329,9 +331,9 @@ function DetailBelajar({data}) {
                   <span className="w-2 lg:w-3 h-2 lg:h-3 bg-red-700 rounded-full relative"></span>
                   kamera tidak aktif
                 </div>
-                <div className="bg-red-500 px-5 py-3 items-center gap-4 rounded-xl text-xs lg:text-base transition-all duration-200">
+                <div className="bg-red-500 px-5 py-3 items-center text-center gap-4 rounded-xl text-xs lg:text-base transition-all duration-200">
                   Silakan berikan izin untuk mengakses kamera pada peramban
-                  Anda, lalu muat ulang halaman ini.
+                  anda dengan memilih tombol dibawah ini, lalu muat ulang halaman ini.
                 </div>
               </div>
             ) : (
