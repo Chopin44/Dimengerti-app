@@ -83,6 +83,7 @@ export default function Home() {
           className="w-fit mx-auto"
         >
           <Button text="Mulai Belajar SIBI" to="/belajar" />
+          
         </m.div>
       </m.div>
 
