@@ -333,7 +333,7 @@ function DetailBelajar({data}) {
                 </div>
                 <div className="bg-red-500 px-5 py-3 items-center text-center gap-4 rounded-xl text-xs lg:text-base transition-all duration-200">
                   Silakan berikan izin untuk mengakses kamera pada peramban
-                  anda dengan memilih tombol dibawah ini, lalu muat ulang halaman ini.
+                  anda.
                 </div>
               </div>
             ) : (

@@ -14,9 +14,8 @@ const App = () => {
       <Route path="/belajar" element={<Belajar />} />
       <Route path="/tentang-kami" element={<TentangKami />} />
       <Route path="/belajar/:id" Component={id} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />     
     </Routes>
-
   </Router>
   
   );
