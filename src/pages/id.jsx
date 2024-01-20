@@ -119,7 +119,7 @@ function DetailBelajar({data}) {
     tf.ENV.set("WEBGL_PACK", true);
 
     // load model
-    const loadedNet = await tf.loadGraphModel("/assets/model1/model.json");
+    const loadedNet = await tf.loadGraphModel("/assets/model/model.json");
     netRef.current = loadedNet;
 
     // Start the loop
