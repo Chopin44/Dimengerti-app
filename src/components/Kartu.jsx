@@ -15,7 +15,7 @@ export default function Card({ name, to,  onClick }) {
         whileHover={{ scale: 1.05 }}
         variants={item}
         onClick={onClick}
-        className={`aspect-auto lg:aspect-square px-8 xl:px-16 py-10 xl:py-10 gap-y-5 md:gap-7 xl:gap-y-10 bg-gray-800 hover:bg-gray-950 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-100 rounded-3xl lg:rounded-4xl flex flex-col items-center justify-center text-warna1 text-center cursor-pointer`}
+        className={`h-40 md:h-48 lg:h-full w-full aspect-auto lg:aspect-square px-8 xl:px-16 py-10 xl:py-10 gap-y-5 md:gap-7 xl:gap-y-10 bg-gray-800 hover:bg-gray-950 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-100 rounded-3xl lg:rounded-4xl flex flex-col items-center justify-center text-warna1 text-center cursor-pointer`}
       >
         <m.h2
           layout="position"

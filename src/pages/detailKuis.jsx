@@ -193,13 +193,13 @@ function DetailBelajar({ data }) {
     };
   }, []); // Empty dependency array to run the effect only once
 
-  // const countdown = () => {
-  //   if (timer > 0) {
-  //     setTimer((prevTimer) => prevTimer - 1);
-  //   } else {
-  //     goToNextPage();
-  //   }
-  // };
+  const countdown = () => {
+    if (timer > 0) {
+      setTimer((prevTimer) => prevTimer - 1);
+    } else {
+      goToNextPage();
+    }
+  };
 
   const handleResetNilai = () => {
     localStorage.setItem("nilai", 0);
@@ -238,7 +238,7 @@ function DetailBelajar({ data }) {
   const goToNextPage = () => {
     const nextPageId = parsedsoalId + 1;
     // Limit navigation to a maximum of 5 pages
-    if (nextPageId <= 5) {
+    if (nextPageId <= 6) {
       window.location.href = `/kuis/${parsedId}/soal/${nextPageId}`;
     } else {
       // If on the 5th page, you can choose to handle it differently
@@ -247,11 +247,11 @@ function DetailBelajar({ data }) {
 
   };
 
-  // useEffect(() => {
-  //   const timerInterval = setInterval(countdown, 1000);
+  useEffect(() => {
+    const timerInterval = setInterval(countdown, 1000);
 
-  //   return () => clearInterval(timerInterval);
-  // }, [timer]);
+    return () => clearInterval(timerInterval);
+  }, [timer]);
 
   useEffect(() => {
     if (objectScore && objectScore > 0.8 && !correctPracticeHandled) {
@@ -370,6 +370,13 @@ function DetailBelajar({ data }) {
 
      
       </div> )}
+
+      {soalId <= 5 && (
+      <m.div className='flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20'>
+        <p className='text-6xl text-warna1'>{timer}</p>
+      </m.div>
+    )}
+
 
       {soalId > 5 && (
         <div className="w-full h-screen flex items-center justify-center text-warna1">
