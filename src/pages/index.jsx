@@ -76,6 +76,7 @@ export default function Home() {
           Aplikasi untuk belajar Sistem Isyarat Bahasa Indonesia dengan
           menggunakan machine learning
         </m.p>
+
         <m.div
           variants={item}
           whileTap={{ scale: 0.95 }}
@@ -85,6 +86,17 @@ export default function Home() {
           <Button text="Mulai Belajar SIBI" to="/belajar" />
           
         </m.div>
+
+        <m.div
+          variants={item}
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          className="w-fit mx-auto mt-16"
+        >
+          <Button text="Kuis" to="/kuis" />
+          
+        </m.div>
+
       </m.div>
 
       <m.div

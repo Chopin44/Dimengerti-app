@@ -7,7 +7,7 @@ import Card from "../components/Kartu";
 import Pagination from "../components/Pagination";
 import { paginate } from "../lib/Paginate";
 import { container, item } from "../components/Animation";
-import data from "../pages/api/data"
+import data from "../pages/api/kuis"
 
 
 
@@ -15,7 +15,7 @@ export default function Belajar() {
   // const [data, setData] = useState(null);
   const [isError, setIsError] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 8;
+  const pageSize = 4;
 
   const onPageChange = (page) => {
     setCurrentPage(page);
@@ -24,9 +24,9 @@ export default function Belajar() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const {Huruf} = data;
-        console.log(Huruf); // Ganti dengan endpoint API yang sesuai
-        setData(Huruf);
+        const {Kuis} = data;
+        // console.log(Kuis); // Ganti dengan endpoint API yang sesuai
+        setData(Kuis);
       } catch (error) {
         setIsError(false);
       }
@@ -35,7 +35,8 @@ export default function Belajar() {
     fetchData();
   }, []);
   
-  const paginatedPosts = paginate(data.Huruf, currentPage, pageSize);
+  const paginatedPosts = paginate(data.Kuis, currentPage, pageSize);
+  console.log(paginatedPosts)
 
   return (
     <div className="text-black p-5 flex flex-col justify-between items-center min-h-screen overflow-hidden container mx-auto">
@@ -104,11 +105,14 @@ export default function Belajar() {
               variants={container}
               className="grid grid-rows-1 lg:grid-rows-2 w-full lg:w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-4 sm:gap-4 lg:gap-4 xl:gap-5"
             >
-              {paginatedPosts.map((x) => (
-                <Card                
-                  name={x.name}
-                  to={`/belajar/${x.id}`}
-                />
+              {paginatedPosts.map((kuis) => (
+                <Card
+                key={kuis.id} // Make sure to provide a unique key for each card
+                name={kuis.soal}
+                to={`/kuis/${kuis.id}/soal/${kuis.isi.find(isiObject => isiObject.id).id}`}
+              />
+                
+               
               ))}
             </m.div>
           )}
