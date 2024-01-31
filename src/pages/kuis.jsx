@@ -12,6 +12,8 @@ import data from "../pages/api/kuis"
 
 
 export default function Kuis() {
+  localStorage.setItem("popup", true)
+  localStorage.setItem("timer", false)
   const [dataKuis, setData] = useState(null);
   const [isError, setIsError] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -111,6 +113,7 @@ export default function Kuis() {
                 <Card
                 key={kuis.id} // Make sure to provide a unique key for each card
                 name={kuis.soal}
+                // onClick={localStorage.setItem("popup", true)}
                 to={`/kuis/${kuis.id}/soal/${kuis.isi.find(isiObject => isiObject.id).id}`}
               />
                 

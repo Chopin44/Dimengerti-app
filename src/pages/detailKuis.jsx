@@ -45,6 +45,7 @@ export default function Halaman({ fallback }) {
     }
   }, []);
 
+
   if (isLoading)
     return (
       <div className="flex flex-row justify-center min-h-screen gap-2 items-center text-base md:text-lg lg:text-xl tracking-tight">
@@ -63,10 +64,12 @@ export default function Halaman({ fallback }) {
 
   return (
     <Suspense fallback={<div>Loading data...</div>}>
+      
       <DetailBelajar data={data} />
     </Suspense>
   );
 }
+
 
 function DetailBelajar({ data }) {
   const [localStorageNilai, setLocalStorageNilai] = useState(
@@ -74,9 +77,58 @@ function DetailBelajar({ data }) {
   );
   const [correctPracticeHandled, setCorrectPracticeHandled] = useState(false);
   const [alertShown, setAlertShown] = useState(false);
- 
+  // const [showTutorial, setShowTutorial] = useState(true);
+  const [mulaiKuis, setMulaiKuis] = useState(false)
 
+
+  const closeTutorial = () => {
+    const namaSoal = data.find((kuis) => kuis.id === parsedId).soal;
   
+    Swal.fire({
+      title: `Selamat datang di Kuis ${namaSoal}`,
+      html: `
+        <div style="text-align: justify; color: #333; font-family: 'Arial', sans-serif; padding: 15px;">
+          <p>Tutorial singkat tentang cara mengikuti kuis ini:</p>
+          <br>
+          <ul style="list-style-type: square; margin-left: 20px;">
+            <li>Pastikan kamera kamu diaktifkan!</li>
+            <li>Terdapat timer pada kuis ini selama 5 detik.</li>
+            <li>Pastikan kamu menirukan gambar atau video dengan benar agar mendapatkan score.</li>
+          </ul>
+          <br>
+          <p>Klik <b>"Mulai Kuis"</b> untuk memulai!</p>
+        </div>
+      `,
+      showCloseButton: false,
+      confirmButtonText: "<b>Mulai Kuis</b>",
+      confirmButtonColor: "#F4CE14",
+      background: "#F5F7F8",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("popup");
+        const kondisiKuis = localStorage.setItem("timer", true);
+        setMulaiKuis(kondisiKuis);
+      }
+    });
+  };
+  
+
+  // const handleMulaiKuis = () => {
+  //   localStorage.setItem("timer", true)
+  // };
+
+  // const handleTutorial = () => {
+  //   setShowTutorial((prevTutorial) => !prevTutorial)
+  // }
+  
+  useEffect(() => {
+    const kondisiPopUp = localStorage.getItem("popup")
+    console.log(kondisiPopUp)
+    if (kondisiPopUp === "true") {
+      closeTutorial();
+    } 
+  }, []);
+
   let dataName;
   let dataHuruf;
   let dataImage;
@@ -98,7 +150,7 @@ function DetailBelajar({ data }) {
     dataImage = image;
     dataVideo = video;
   }
-  // console.log(dataHuruf)
+  // console.log(mulaiKuis)
 
   const [objectName, setObjectName] = useState("");
   const [objectScore, setObjectScore] = useState("");
@@ -193,13 +245,6 @@ function DetailBelajar({ data }) {
     };
   }, []); // Empty dependency array to run the effect only once
 
-  const countdown = () => {
-    if (timer > 0) {
-      setTimer((prevTimer) => prevTimer - 1);
-    } else {
-      goToNextPage();
-    }
-  };
 
   const handleResetNilai = () => {
     localStorage.setItem("nilai", 0);
@@ -248,10 +293,29 @@ function DetailBelajar({ data }) {
   };
 
   useEffect(() => {
-    const timerInterval = setInterval(countdown, 1000);
+    let intervalId;
+    const kondisiMulai = localStorage.getItem("timer")
+    if (kondisiMulai == "true") {
+      intervalId = setInterval(() => {
+        setTimer((prevTimer) => {
+          if (prevTimer > 0) {
+            return prevTimer - 1;
+          } else {
+            clearInterval(intervalId);
+            goToNextPage();
+            return 0;
+          }
+        });
+      }, 1000);
+    } else {
+      // If mulaiKuis is false, clear the interval
+      clearInterval(intervalId);
+    }
 
-    return () => clearInterval(timerInterval);
-  }, [timer]);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [localStorage.getItem("timer")]);
 
   useEffect(() => {
     if (objectScore && objectScore > 0.8 && !correctPracticeHandled) {
@@ -262,6 +326,8 @@ function DetailBelajar({ data }) {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen mx-auto">
+       
+
       {soalId <= 5 && (
       <div className="w-full lg:w-1/2 h-1/2 lg:h-full p-6 text-black-500 flex flex-col justify-between items-center">
         <m.div
@@ -373,7 +439,7 @@ function DetailBelajar({ data }) {
 
       {soalId <= 5 && (
       <m.div className='flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20'>
-        <p className='text-6xl text-warna1'>{timer}</p>
+        <p className='lg:text-9xl font-extrabold text-gray-300 text-4xl'>{timer}</p>
       </m.div>
     )}
 
