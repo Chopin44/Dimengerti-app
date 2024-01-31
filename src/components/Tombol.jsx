@@ -3,7 +3,7 @@ import { Icon, InlineIcon } from "@iconify/react";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 
-export default function Button({ variant, text, to, navigate}) {
+export default function Button({ variant, text, to, onClick, navigate}) {
   switch (variant) {
     case "outline":
       return (
@@ -19,7 +19,8 @@ export default function Button({ variant, text, to, navigate}) {
       return (
         <Link
           to={to}
-          className="duration-200 px-10 md:px-20 py-4 md:py-5 rounded-full bg-blue-400 hover:bg-blue-800 text-black font-medium text-lg md:text-xl tracking-tight "
+          onClick={onClick}
+          className="duration-200 px-10 md:px-20 py-4 md:py-5 rounded-full bg-warna2 hover:bg-warna1 text-black font-medium text-lg md:text-xl tracking-tight "
         >
           {text}
         </Link>
@@ -29,12 +30,23 @@ export default function Button({ variant, text, to, navigate}) {
       return (
         <Link
           to={to}
-          onClick={() => navigate()}
+          onClick={onClick}
           className="duration-200 px-2 py-1 rounded-xl text-black font-normal text-base md:text-xl tracking-tight hover:underline focus:outline-none focus:ring-2 focus:ring-black "
         >
           {text}
         </Link>
       );
+
+      case "naked-2":
+        return (
+          <Link
+            to={to}
+            onClick={() => navigate()}
+            className="duration-200 px-2 py-1 rounded-xl text-black font-normal text-base md:text-xl tracking-tight hover:underline focus:outline-none focus:ring-2 focus:ring-black "
+          >
+            {text}
+          </Link>
+        );  
 
     case "naked-disabled":
       return (
