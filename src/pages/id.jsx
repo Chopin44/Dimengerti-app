@@ -288,7 +288,7 @@ function DetailBelajar({data}) {
             <Button variant="naked-disabled" text="selanjutnya >" />
           ) : (
             <Button
-              variant="naked"
+              variant="naked-2"
               text="selanjutnya >"
               to={`/belajar/${parsedId + 1}`}
               

@@ -65,19 +65,18 @@ export default function Halaman({ fallback }) {
   return (
     <Suspense fallback={<div>Loading data...</div>}>
       
-      <DetailBelajar data={data} />
+      <DetailKuis data={data} />
     </Suspense>
   );
 }
 
 
-function DetailBelajar({ data }) {
+function DetailKuis({ data }) {
   const [localStorageNilai, setLocalStorageNilai] = useState(
     parseInt(localStorage.getItem("nilai")) || 0
   );
   const [correctPracticeHandled, setCorrectPracticeHandled] = useState(false);
   const [alertShown, setAlertShown] = useState(false);
-  // const [showTutorial, setShowTutorial] = useState(true);
   const [mulaiKuis, setMulaiKuis] = useState(false)
 
 
@@ -112,14 +111,6 @@ function DetailBelajar({ data }) {
     });
   };
   
-
-  // const handleMulaiKuis = () => {
-  //   localStorage.setItem("timer", true)
-  // };
-
-  // const handleTutorial = () => {
-  //   setShowTutorial((prevTutorial) => !prevTutorial)
-  // }
   
   useEffect(() => {
     const kondisiPopUp = localStorage.getItem("popup")
@@ -150,7 +141,7 @@ function DetailBelajar({ data }) {
     dataImage = image;
     dataVideo = video;
   }
-  // console.log(mulaiKuis)
+ 
 
   const [objectName, setObjectName] = useState("");
   const [objectScore, setObjectScore] = useState("");
