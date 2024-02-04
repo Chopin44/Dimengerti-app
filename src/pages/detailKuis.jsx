@@ -147,7 +147,7 @@ function DetailKuis({ data }) {
   const [objectScore, setObjectScore] = useState("");
   const [gambar, setGambar] = useState(true);
   const [deteksi, setDeteksi] = useState(true);
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(10);
   const [nilai, setNilai] = useState(0);
 
   const webcamRef = useRef(null);
@@ -242,7 +242,7 @@ function DetailKuis({ data }) {
   };
 
   const resetTimer = () => {
-    setTimer(5);
+    setTimer(10);
   };
 
   const handleCorrectPractice = () => {

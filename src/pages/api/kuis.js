@@ -35,10 +35,10 @@ const data = {
         },
         {
           id: 5,
-          name: "huruf d",
-          shortName: "d",
-          image: "/assets/images/d.webp",
-          video: "/assets/videos/D.webm",
+          name: "huruf u",
+          shortName: "u",
+          image: "/assets/images/u.webp",
+          video: "/assets/videos/U.webm",
         },
 
         // Add more isi objects as needed
@@ -51,10 +51,10 @@ const data = {
       isi: [
         {
           id: 1,
-          name: "huruf x",
-          shortName: "x",
-          image: "/assets/images/x.webp",
-          video: "/assets/videos/X.webm",
+          name: "huruf v",
+          shortName: "v",
+          image: "/assets/images/v.webp",
+          video: "/assets/videos/V.webm",
         },
         {
           id: 2,
@@ -65,24 +65,24 @@ const data = {
         },
         {
           id: 3,
-          name: "huruf d",
-          shortName: "d",
-          image: "/assets/images/d.webp",
-          video: "/assets/videos/D.webm",
+          name: "huruf o",
+          shortName: "o",
+          image: "/assets/images/o.webp",
+          video: "/assets/videos/O.webm",
         },
         {
           id: 4,
+          name: "huruf i",
+          shortName: "i",
+          image: "/assets/images/i.webp",
+          video: "/assets/videos/I.webm",
+        },
+        {
+          id: 5,
           name: "huruf e",
           shortName: "e",
           image: "/assets/images/e.webp",
           video: "/assets/videos/E.webm",
-        },
-        {
-          id: 5,
-          name: "huruf b",
-          shortName: "b",
-          image: "/assets/images/b.webp",
-          video: "/assets/videos/B.webm",
         },
         // Add more isi objects as needed
       ],
@@ -115,17 +115,17 @@ const data = {
         },
         {
           id: 4,
-          name: "huruf s",
-          shortName: "s",
-          image: "/assets/images/s.webp",
-          video: "/assets/videos/S.webm",
+          name: "huruf q",
+          shortName: "q",
+          image: "/assets/images/q.webp",
+          video: "/assets/videos/Q.webm",
         },
         {
           id: 5,
-          name: "huruf g",
-          shortName: "g",
-          image: "/assets/images/g.webp",
-          video: "/assets/videos/G.webm",
+          name: "huruf t",
+          shortName: "t",
+          image: "/assets/images/t.webp",
+          video: "/assets/videos/T.webm",
         },
         // Add more isi objects as needed
       ],
