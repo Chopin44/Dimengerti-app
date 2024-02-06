@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import ReactPlayer from "react-player";
-// import Head from "next/head";
+import ReactAudioPlayer from 'react-audio-player';
 import { useParams } from 'react-router-dom';
 import { motion as m } from "framer-motion";
 import Button from "../components/Tombol";
@@ -69,7 +69,7 @@ function DetailBelajar({data}) {
     const {id} = useParams()
     const parsedId = parseInt(id, 10); // Mengubah id menjadi integer
     const selectedHuruf = data.find(huruf => huruf.id === parsedId);
-    const {name, shortName, desc, image, video} = selectedHuruf  
+    const {name, shortName, desc, image, video, audio} = selectedHuruf  
    
 
   const [objectName, setObjectName] = useState("");
@@ -77,6 +77,10 @@ function DetailBelajar({data}) {
   const [objectScore, setObjectScore] = useState("");
 
   const [gambar, setGambar] = useState(true);
+
+  const [videoGambar, setVideoGambar] = useState(true);
+
+  const [showAudio, setAudio] = useState(false);
 
   const [deteksi, setDeteksi] = useState(true);
 
@@ -207,6 +211,7 @@ function DetailBelajar({data}) {
           </m.div>
 
           <div className="flex gap-x-5">
+
             <m.div variants={item} className="my-2 md:my-4">
               <button
                 onClick={() => setGambar(true)}
@@ -217,17 +222,32 @@ function DetailBelajar({data}) {
                 gambar
               </button>
             </m.div>
+
             <m.div variants={item} className="my-2 md:my-4">
               <button
-                onClick={() => setGambar(false)}
+                onClick={() => {setGambar(false); setVideoGambar(true); setAudio(false)}}
                 className={`duration-200 px-2 py-1 text-black-500 font-normal text-base md:text-xl tracking-tight hover:underline ${
-                  !gambar && `text-primary-500 underline`
+                  !gambar && videoGambar && `text-primary-500 underline`
                 }`}
               >
                 video
               </button>
             </m.div>
+
+            <m.div variants={item} className="my-2 md:my-4">
+              <button
+                onClick={() => {setGambar(false); setVideoGambar(false); setAudio(true)}}
+                className={`duration-200 px-2 py-1 text-black-500 font-normal text-base md:text-xl tracking-tight hover:underline ${
+                  !gambar && !videoGambar &&  `text-primary-500 underline`
+                }`}
+              >
+                audio
+              </button>
+            </m.div>
+            
           </div>
+
+       
         </m.div>
 
         <m.div
@@ -237,11 +257,23 @@ function DetailBelajar({data}) {
           variants={container}
           className="my-0 md:my-3 lg:my-10 w-full h-full md:h-1/2 flex items-center justify-center text-2xl tracking-tight"
         >
+          
           {!gambar ? (
+            
             <m.div
               variants={item}
-              className="flex h-full md:h-full w-full justify-center items-center"
+              className="flex flex-col h-full md:h-full w-full justify-center items-center"
             >
+              {showAudio && (
+              <ReactAudioPlayer
+                src={audio}
+                autoPlay
+                controls
+                className='mb-4'
+              />) 
+
+              }
+              
               <ReactPlayer
                 url={video}
                 playing={true}
@@ -251,6 +283,7 @@ function DetailBelajar({data}) {
                 className="overflow-hidden w-full max-h-60 md:max-h-full aspect-video"
               />
             </m.div>
+            
           ) : (
             <m.div
               variants={item}

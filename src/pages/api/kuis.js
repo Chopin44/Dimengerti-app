@@ -130,6 +130,92 @@ const data = {
         // Add more isi objects as needed
       ],
     },
+
+    {
+      id: 4,
+      soal: "Soal 4",
+      isi: [
+        {
+          id: 1,
+          name: "huruf z",
+          shortName: "z",
+          image: "/assets/images/z.webp",
+          video: "/assets/videos/Z.webm",
+        },
+        {
+          id: 2,
+          name: "huruf o",
+          shortName: "o",
+          image: "/assets/images/o.webp",
+          video: "/assets/videos/O.webm",
+        },
+        {
+          id: 3,
+          name: "huruf q",
+          shortName: "q",
+          image: "/assets/images/q.webp",
+          video: "/assets/videos/Q.webm",
+        },
+        {
+          id: 4,
+          name: "huruf w",
+          shortName: "w",
+          image: "/assets/images/w.webp",
+          video: "/assets/videos/W.webm",
+        },
+        {
+          id: 5,
+          name: "huruf u",
+          shortName: "u",
+          image: "/assets/images/u.webp",
+          video: "/assets/videos/U.webm",
+        },
+        // Add more isi objects as needed
+      ],
+    },
+
+    {
+      id: 5,
+      soal: "Soal 5",
+      isi: [
+        {
+          id: 1,
+          name: "huruf r",
+          shortName: "r",
+          image: "/assets/images/r.webp",
+          video: "/assets/videos/R.webm",
+        },
+        {
+          id: 2,
+          name: "huruf y",
+          shortName: "y",
+          image: "/assets/images/y.webp",
+          video: "/assets/videos/Y.webm",
+        },
+        {
+          id: 3,
+          name: "huruf i",
+          shortName: "i",
+          image: "/assets/images/i.webp",
+          video: "/assets/videos/I.webm",
+        },
+        {
+          id: 4,
+          name: "huruf m",
+          shortName: "m",
+          image: "/assets/images/m.webp",
+          video: "/assets/videos/M.webm",
+        },
+        {
+          id: 5,
+          name: "huruf n",
+          shortName: "n",
+          image: "/assets/images/n.webp",
+          video: "/assets/videos/N.webm",
+        },
+        // Add more isi objects as needed
+      ],
+    },
   ],
 };
 

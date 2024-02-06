@@ -123,7 +123,7 @@ export default function Kuis() {
           )}
           {!data ? null : (
             <m.div variants={item} className="hidden lg:flex">
-              {currentPage >= 2 ? (
+              {currentPage >= 3 ? (
                 <button
                   key={currentPage}
                   className="w-12 h-12 flex items-center justify-center duration-200 rounded-full bg-gray-500 text-warna1 font-medium text-lg md:text-2xl tracking-tight cursor-not-allowed focus:outline-none focus:ring focus:ring-gray-100"
